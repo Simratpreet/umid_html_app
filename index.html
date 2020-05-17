@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Cache-control" content="no-cache"/>
+
+<meta http-equiv="pragma" content="no-cache"/>
+    <meta name="description" content="Decentralization, Emergency Spotting">
+    <meta name="author" content="Umid">
+    <meta property="og:image" content="http://umid-corona.in/assets/UMID.png"/>
+      <meta property="og:title" content="UMID-it starts with you"/>
+      <meta property="og:type" content="website"/>
+      <meta property="fb:app_id" content="285140139148728"/>
+      <meta property="og:url" content="https://umid-corona.in/"/>
+      <meta property="og:description" content="Decentralization, Emergency Spotting">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+<link rel="icon" 
+      type="image/png" 
+      href="favicon.png">
+      <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+
+	  
+<style>
+#myDIV {
+  width: 100%;
+  
+  text-align: center;
+ 
+  margin-top: 20px;
+  
+}
+
+.owl-item {
+    height: 100px;;
+}
+
+/* .author-item {
+    top: 20px;
+} */
+
+.input-width {
+    width: 60%;
+    border-radius: 13px;
+    border: 1px #ccc;
+    outline: none;
+    height: 32px;
+    font-size: 16px;
+    padding: 1px 10px;
+}
+
+.mobview {
+    display: none;
+}
+
+.label {
+    width: 14%;
+}
+
+.field {
+    margin: 10px 0;
+}
+
+.absimg-block {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+#store {
+    background: rgb(225, 245, 254);
+    padding-bottom: 50px;
+}
+
+.field input {
+    width: 90%;
+    padding: 0 10px;
+    height: 35px;
+    outline: none;
+    border: 1px #dbdee2;
+    border-radius: 4px;
+    box-shadow: 1px 3px 7px #dbdee2;
+}
+
+.volunteer {
+    border: 1px solid #0290ea;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    color: #0290ea;
+    margin: auto;
+}
+
+.section1, .section2, .section3 {
+    padding: 60px 0;
+}
+
+.privacy-block {
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+}
+
+.active {
+    color: #0390ea;
+}
+
+.abs-img2 {
+    width: 100%;
+    position: absolute;
+    right: -80px;
+    top: 10px;
+}
+
+.abs-img1 {
+    width: 100%;
+    position: absolute;
+    left: -30px;
+    top: 0px;
+}
+
+.teams a {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    text-align: center;
+    line-height: 32px;
+    font-size: 14px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #0290ea;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.teams a:hover {
+  background-color: #0290ea;
+  color: #fff;
+}
+
+#testimonials-section .owl-carousel.owl-drag .owl-item {
+	height: auto !important;
+    margin-top: 40px;
+    text-align: center;
+}
+
+#testimonials-section .owl-dots .owl-dot span {
+	background-color: #0390ea;
+}
+
+.floating {
+    float: left;
+}
+
+#testimonials-section .item.author-item {
+	margin-bottom: 30px;
+}
+
+.privacy-policy {
+	color: #fff; 
+	font-size: 14px;
+	/* margin-bottom: 30px; */
+}
+
+.nav-mob {
+	display: none;
+}
+
+</style>
+    <title>UMID</title>
+
+<!--
+
+Breezed Template
+
+https://templatemo.com/tm-543-breezed
+
+-->
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/templatemo-breezed.css">
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            
+							<img src="assets/images/appimg/Logo-White.jpg" style="width: 120px;" />
+							
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="#about">About</a></li>
+                            <!-- <li class="scroll-to-section"><a href="#store">Team</a></li> -->
+                            <li class="scroll-to-section"><a href="#testimonials">Team</a></li>
+                            
+                           
+                            <li class="scroll-to-section"><a href="#contact-us">Contact Us</a></li> 
+							<li class="scroll-to-section"><a href="https://app.umid-corona.in" target="_blank">Login / SignUp</a></li> 
+                            
+                        </ul>
+						<ul class="nav-mob">
+							<li class="scroll-to-section"><a href="https://app.umid-corona.in" target="_blank" style="margin-right: 30px;">Login / SignUp</a></li> 
+                            
+                        </ul>						
+                        
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    
+    <!-- ***** Search Area ***** -->
+    
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="main-banner header-text" id="top">
+        <div class="Modern-Slider">
+            <div>
+                
+                <div class="row" style="background-color: #fff; margin: 0; display: flex; align-items: center; width: 100%;">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12  section1">
+                        <img src="assets/images/appimg/img1.png" style="width: 100%;" />
+                    </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 section3" style="text-align: center;">
+                    <h3 style=" color: #0390ea;"">Welcome aboard</h3>
+                  <p style="margin: 10px; 
+                  color: #0390ea;"><i>It starts with U</i></p>
+                    <form id="volunteer">
+                        <div class="row">
+                          <div class="col-md-6 col-sm-12">
+                            <fieldset class="field">
+                              <input name="name" type="text" id="v_name" placeholder="Your Name *" required="">
+                            </fieldset>
+                          </div>
+                          <div class="col-md-6 col-sm-12">
+                            <fieldset class="field">
+                              <input name="phone" type="text" id="v_phone" placeholder="Your Phone" required="">
+                            </fieldset>
+                          </div>
+                          <div class="col-md-6 col-sm-12">
+                            <fieldset class="field">
+                              <input name="email" type="email" id="v_email" placeholder="Your Email *" required="">
+                            </fieldset>
+                          </div>
+                          <div class="col-md-6 col-sm-12">
+                            <fieldset class="field">
+                                <input name="city" type="text" id="v_city" placeholder="Your City *" required="">
+                            </fieldset>
+                          </div>
+                          <!-- <div class="col-lg-12">
+                            <fieldset>
+                              <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
+                            </fieldset>
+                          </div> -->
+                          <div class="col-lg-12">
+                            <fieldset class="field">
+                                <button type="submit" id="form-submit" class="main-button-icon">Be our Volunteer <i class="fa fa-arrow-right"></i></button>
+                            </fieldset>
+                          </div>
+                        </div>
+                      </form>
+                    <!-- <form id="contact" action="" method="get" class="volunteer">
+                        <div class="row">
+                          <div class="col-md-12 col-sm-12">
+                            <fieldset class="field">
+                                <label class="label">Name</label>
+                              <input name="name" type="text" id="name" class="input-width" required="">
+                            </fieldset>
+                          </div>
+                          <div class="col-md-12 col-sm-12">
+                            <fieldset class="field">
+                                <label class="label">Phone</label>
+                              <input name="phone" type="text" id="phone" class="input-width" required="">
+                            </fieldset>
+                          </div>
+                          <div class="col-md-12 col-sm-12">
+                            <fieldset class="field">
+                                <label class="label">Email</label>
+                              <input name="email" type="email" id="email" class="input-width" required="">
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-12">
+                            <fieldset class="field">
+                              <button type="submit" id="form-submit" class="main-button-icon">Be our Volunteer <i class="fa fa-arrow-right"></i></button>
+                            </fieldset>
+                          </div>
+                        </div>
+                      </form> -->
+                </div>
+                <!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 section2" style="color: #0290ea; text-align: center;"
+                    <!-- <div class="text-content"> --                        <h3>Welcome To UMID</h3>
+                        <h5 style="margin: 4px 0 20px 0">It starts with U</h5>
+                        <a href="#" class="main-stroked-button">IOS</a>
+                        <a href="#" class="main-stroked-button">Android</a>
+                        <br><br>
+                        <h5>Coming Soon !!!</h5> 
+                    <!-- </div> --
+                </div> -->
+                
+            </div>
+        </div>
+          <!-- Item -->
+          <!-- <div class="item">
+            <div class="img-fill">
+                <div>
+                    My form
+                </div>
+                <!-- <img src="assets/images/slide-03.jpg" alt=""> --
+                <div class="text-content">
+                  <h3>Welcome To UMID</h3>
+                  <h5>It starts with U</h5>
+                  <a href="#" class="main-stroked-button">IOS</a>
+                  <a href="#" class="main-stroked-button">Android</a>
+				  <br><br>
+               <h5>Coming Soon !!!</h5>
+			   
+                </div>
+                <div style="width: auto; height: 100%; display: flex; align-items: center;">
+                    <img src="assets/images/appimg/img1.jpg" />
+                </div>
+            </div>
+          </div> -->
+          <!-- // Item -->
+          <!-- Item -->
+          
+          <!-- // Item -->
+          <!-- Item -->
+          
+          <!-- // Item -->
+
+        </div>
+    </div>
+    <div class="scroll-down scroll-to-section"><a href="#about"><i class="fa fa-arrow-down"></i></a></div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** About Area Starts ***** -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 style="text-align: center; color: #0290ea; font-weight: bold; margin-bottom: 30px;">About Us</h2>
+            <div class="row"">
+                
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="left-text-content">
+                        
+                        <div class="section-heading">
+                            
+                            <h2 style="color: #777;
+                            font-weight: 400;">Lets fight Covid-19 together</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="service-item">
+                                    <img src="assets/images/appimg/64.png" alt="">
+                                    <h5 style="font-size: 16px;">Community Engagement </h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="service-item">
+                                    <img src="assets/images/appimg/63.png" alt="">
+                                    <h5 style="font-size: 16px;">Help Each Other </h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="service-item">
+                                    <img src="assets/images/appimg/61.png" alt="">
+                                    <h5 style="font-size: 16px;">Decentralized Platform </h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="service-item">
+                                    <img src="assets/images/appimg/62.png" alt="">
+                                    <h5 style="font-size: 16px;">Mental Wellbeing</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <br/>
+                                 <video style="    max-width: 100%;
+                        min-width: 100%;
+                        min-height: 100%;
+                        width: auto;
+                        height: auto;
+                        z-index: -100;
+                        background-color: black;
+                        background-size: cover;
+                        transition: 1s opacity;" controls autoplay muted>
+                        <source src="https://storage.cloud.google.com/umidimages/video.mp4" type="video/mp4">    
+                    </video>
+							<!-- <br>
+                                <button onclick="myFunction()" class="main-button-icon">
+                                     Be our Volunteer </button> <i class="fa fa-arrow-right"></i>
+                                </a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="right-text-content">
+                        <p style="text-align: justify;">
+                            While our Corona warriors are working tirelessly to help contain COVID-19, what could be better if each individual can contribute towards the society. With this goal in mind, we have initiated a project- UMID (a social initiative) : Peer-to-Peer platform where users can collaborate and connect to the people around to help them in emergency (Food/supplies, mental wellbeing or ad-hoc help).<br/><br/></br>
+It also enables users to connect with the nearest Kirana/Medical store to order necessary items, either to get it delivered at their doorstep or coordinate with the shopkeeper to collect the items at a pre-decided time. This will also be extended to include volunteers who can support in the logistics (either paid or social service), supporting jobless people to make some wages for their living. 
+We really want to create a community of connecting local shops and daily wagers to the common public through our platform. This auto functioning mode would uplift these entities who could have been hit worst by COVID-19, at the same time bringing ease to the final user.
+                        </p>
+                       
+						</div>
+                </div>
+            </div>
+			<div id="myDIV">
+<div id="myDIV">
+<!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd_winHRJS78_JT0JNguUCk8G6x5UcMkNfFbHKboNm5N-rrOw/viewform?embedded=true" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+</div>
+</div>
+        </div>
+    </section>
+    <!-- ***** About Area Ends ***** -->
+
+    <section class="section" id="store" style="position: relative;">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading" style="text-align: center;">
+                        <h2 style="color: #50a6ed;">Get started to help others</h2>
+                        <h4 style="color: #50a6ed;
+                        line-height: 2;"><i>Collaborate &amp; Help</i></h4>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="text-align: center;">
+                    <div class="floating">
+                    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.umid"><img src="assets/images/appimg/playstore.png" style="width: 160px;border: 1px solid;
+                    border-radius: 5px; margin: 50px 0px 0 0;"/></a>
+                    
+                    <div style="" class="qrcode">
+                        <p style="    text-align: center;
+                        margin: 10px;
+                        color: #449fec;">or</p>
+                        <img src="assets/qrcode.png" style="width: 160px;border: 1px solid;
+                        border-radius: 5px;  "/>
+                        <p style="width: 160px;
+                        text-align: center;
+                        margin: auto;
+                        color: #50a6ed;
+                        font-size: 14px;">Scan with camera to get the latest version of app</p>
+                        </div>
+                        </div>
+                        <div class="appstore">
+                            <img src="assets/images/appimg/appstore.png" style="width: 160px;border: 1px solid;
+                    border-radius: 5px; margin: 50px 0px 0 0;"/>
+                    <p style="    margin-top: 10px;
+                    color: #44a0ec;">Coming Soon!</p>
+                        </div>
+                   
+                    <!-- <h2 style="line-height: 2;
+                    font-size: 16px;
+                    margin-top: 10px;">Coming Soon! Currently under beta testing</h2> -->
+                </div>
+               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                   <div class="absimg-block">
+                        <img src="assets/images/appimg/img2.png" class="abs-img1" />
+                        <img src="assets/images/appimg/img3.png" class="abs-img2" />
+                   </div>
+                   
+               </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- ***** Testimonials Starts ***** -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <!-- <h2>Our Team</h2> -->
+                        <h2>Our Warriors</h2>
+                        <h4 style="line-height: 1.6;
+                        font-size: 20px;">Fighting to save humanity</h4>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 mobile-bottom-fix-big" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    
+                    <div class="owl-carousel owl-theme">
+                        <div class="item author-item">
+                            <div class="teams">
+                                <!-- <img src="assets/images/tameesh.jpg" alt=""> -->
+                                <!-- <ul><li> -->
+                                    <a href="http://linkedin.com/in/tameeshsood59"><i class="fa fa-linkedin"></i></a>
+                                <!-- </li></ul> -->
+                            </div>
+                            <h4>Tameesh Sood</h4>
+                           <!-- <span>Co-Founder</span> -->
+                        </div>
+                        <div class="item author-item">
+                            <div class="teams">
+                                <!-- <img src="assets/images/atul.jpg" alt=""> -->
+                                <!-- <ul><li> -->
+                                    <a href="http://linkedin.com/in/atulkmanchanda"><i class="fa fa-linkedin"></i></a>
+                                <!-- </li></ul> -->
+                            </div>
+                            <h4>Atul Manchanda</h4>
+                        </div>
+                        <div class="item author-item">
+                            <div class="teams">
+                                <!-- <img src="assets/images/manish.jpg" alt=""> -->
+                                <!-- <ul> -->
+                                    <!-- <li> -->
+                                <a href="https://www.linkedin.com/in/dalalmanish/"><i class="fa fa-linkedin"></i></a>
+
+                                <!-- </li> -->
+                            <!-- </ul> -->
+                                <!-- <div class="hover-effect">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            
+                                            
+                                        </ul>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <h4>Manish Kumar</h4>
+                        </div>
+
+                        <div class="item author-item">
+                            <div class="teams">
+                                <!-- <img src="assets/images/atul.jpg" alt=""> -->
+                                <a href="https://www.linkedin.com/in/aditya-raj-singhvi-742431166/"><i class="fa fa-linkedin"></i></a>
+                                
+                            </div>
+                            <h4>Aditya Raj Singhvi</h4>
+                        </div>
+                        <div class="item author-item">
+                            <div class="teams">
+                                <a style="visibility: hidden;" href="http://linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+
+                            </div>
+                            <h4>Aman Maheshwari</h4>
+                        </div>
+                        <div class="item author-item">
+                            <div class="teams">
+                                <a style="visibility: hidden;" href="http://linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                                
+                            </div>
+                            <h4>Yash Rajpal</h4>
+                        </div>
+
+                        <div class="item author-item">
+                            <div class="teams">
+                                <!-- <img src="assets/images/ashok.jpg" alt=""> -->
+                                <a style="visibility: hidden;" href="http://linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                                
+                            </div>
+                            <h4>Ashok Binoy</h4>
+                        </div>
+                        <div class="item author-item">
+                            <div class="teams">
+                                <a href="https://www.linkedin.com/in/avinav-kandhway-67240b184/"><i class="fa fa-linkedin"></i></a>
+                                
+                            </div>
+                            <h4>Avinav Kandhway</h4>
+                        </div>
+                        <div class="item author-item">
+                            <div class="teams">
+                               <a href="https://www.linkedin.com/in/sushmakumari4/"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                            <h4>Sushma Kumari</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Testimonials Ends ***** -->
+
+    <section class="section" id="testimonials-section" style="background: #fff;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <!-- <h2>Our Team</h2> -->
+                        <h2 class="test-header" style="color: #0390ea; text-align: center;">Testimonials</h2>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 mobile-bottom-fix-big" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    
+                    <div class="owl-carousel owl-theme">
+                        <div class="item author-item">
+                            <div class="teams">
+                                <p class="slider__txt">"Times are scary and I understand how people's anxiety has been at an al time high. This initiative is really great and I fully endorse its focus on mental well being. We can all get through this together with initiatives like UMID"
+<br> <h6 style="color: #777;margin-top: 30px;">-Ushma Asher (clinical psychologist) </h6></p>
+                           <!-- <span>Co-Founder</span> -->
+                        </div>
+						</div>
+                        <div class="item author-item">
+                            <p class="slider__txt">"In this period of uncertainty and unrest, UMID's initiative looks very promising to me. Their idea of bringing the community together, via such a platform that aims to cater to social and psychological needs, is a bright one which can help bridge the physical distance that has divided us. I believe that we survive because of the community and community survives because of us. For the mutual survival, an initiative like UMID is need of the hour. Much luck and best wishes to UMID"
+<br> <h6 style="color: #777;margin-top: 30px;">- Prachi Shah (Clinical psychologist) </h6></p>
+                        </div>
+                        <div class="item author-item">
+                             <p class="slider__txt">
+	  "Kudos to the team for such an amazing initiative, it would bring in the sense of community engagement and give people a purpose to fight for"
+	  <br> <h6 style="color: #777;margin-top: 30px;">- Udit Sharma (HR executive and a youtuber) </h6>
+	  </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ***** Contact Us Area Starts ***** -->
+    <section class="section" id="contact-us">
+        
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            
+                            <h2>Feel free to keep in touch with us!</h2>
+                        </div>
+                        <ul class="contact-info">
+                            <li><img src="assets/images/appimg/phone.png" alt="">+91-9205397045</li>
+                            <li><img src="assets/images/appimg/mail.png" alt="">mtask2020@gmail.com</li>
+                            <li><img src="assets/images/appimg/web.png" alt="">www.umid-corona.in</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-xs-12">
+                    <div class="contact-form">
+                        <h2 style="color: #0290ea; text-align: center; margin-bottom: 40px; font-weight: bold;">Contact Us</h2>
+
+                        <form id="contact">
+                          <div class="row">
+
+                            <div class="col-md-6 col-sm-12">
+                              <fieldset>
+                                <input name="name" type="text" id="name" placeholder="Your Name *" required="">
+                              </fieldset>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                              <fieldset>
+                                <input name="phone" type="text" id="phone" placeholder="Your Phone" required="">
+                              </fieldset>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                              <fieldset>
+                                <input name="email" type="email" id="email" placeholder="Your Email *" required="">
+                              </fieldset>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                              <fieldset>
+                                <input name="subject" type="text" id="subject" placeholder="Subject">
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                              <fieldset>
+                                <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                              <fieldset>
+                                <button type="submit" id="form-submit" class="main-button-icon">Send Message Now <i class="fa fa-arrow-right"></i></button>
+                              </fieldset>
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Contact Us Area Ends ***** -->
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="display: flex; align-items: center;">
+                    <div class="left-text-content" style="width: 100%;">
+                        <p>Copyright &copy; 2020 UMID. 
+                        
+                       
+                    </div>
+                    
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 privacy-block">
+                    <!-- <div class="privacy-policy"><a href="assets/policy.html" target="_blank" style="color: #fff;">Privacy Policy</a></div> -->
+                    <!-- <div class="privacy-policy"><a href="assets/terms.html" target="_blank" style="color: #fff;">Terms & Conditions</a></div> -->
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                    <div class="right-text-content">
+                            <ul class="social-icons">
+                                <li><p>Follow Us</p></li>
+                                <li><a rel="nofollow" href="https://www.facebook.com/UMID4CovidFighters"><i class="fa fa-facebook"></i></a></li>
+                                <li><a rel="nofollow" href="https://twitter.com/UMID03303513"><i class="fa fa-twitter"></i></a></li>
+                                <li><a rel="nofollow" href="https://www.linkedin.com/company/umid/"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a rel="nofollow" href="https://www.instagram.com/umid_coronawarriors/"><i class="fa fa-instagram"></i></a></li>
+                                <li><a rel="nofollow" href="https://www.instagram.com/umid_coronawarriors/"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- <div class="wp-caption alignnone" id="popup" style="background-color: #ddfdcc;
+    width: 93% !important;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 14px;
+    color: #868b83;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;">
+    <h2>Thanks!</h2>
+    <p>We appreciate that you’ve taken the time to write us. We’ll get back to you very soon. Please come back and see us often.</p>
+    </div> -->
+
+    <!-- jQuery -->
+    <script>
+    //    var response = new Headers();
+    //    response.set("Set-Cookie", "HttpOnly;Secure;SameSite=Strict");
+
+    </script>
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script> 
+    <script src="assets/js/slick.js"></script> 
+    <script src="assets/js/lightbox.js"></script> 
+    <script src="assets/js/isotope.js"></script> 
+    <script src="assets/js/customscript.min.js"></script>
+    
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+
+    <script>
+
+        $(function() {
+		var x = document.getElementById("myDIV");
+		x.style.display = "none";
+		
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+                
+            });
+        });
+
+    </script>
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+  </body>
+</html>
